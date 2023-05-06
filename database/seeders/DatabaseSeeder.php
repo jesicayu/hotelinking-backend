@@ -2,18 +2,13 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Offer;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-
         Offer::create([
             'title' => '10% off Hotel Sea',
             'description' => 'Enjoy 10% off at a luxurious resort by the sea',
