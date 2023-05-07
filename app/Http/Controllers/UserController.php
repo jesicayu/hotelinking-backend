@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\UserRepository;
 
-
 class UserController extends Controller
 {
     private $userRepository;
@@ -13,6 +12,7 @@ class UserController extends Controller
         $this->userRepository = $userRepository;
     }
     public function registerUser(Request $request){
+
         $email = $request->email;
         $password = $request->password;
 
@@ -23,5 +23,29 @@ class UserController extends Controller
         }
 
         return response()->json(['message' => 'User created'], 201);
+    }
+
+    public function logInUser(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $email = $request->email;
+        $password = $request->password;
+
+        $user = $this->userRepository->login($email, $password);
+
+        if (!$user) {
+            return response()->json(['message' => 'Invalid credentials'], 401);
+        }
+
+        // Generate authentication token or perform other actions
+
+        return response()->json([
+            'email' => $user->email,
+            'id' => $user->id,
+        ], 200);
     }
 }

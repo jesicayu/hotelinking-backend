@@ -17,14 +17,3 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::prefix('offer')->group(function () {
-    include('offerRouter.php');
-});
-
-Route::prefix('coupon')->group(function () {
-    include('couponRouter.php');
-});
-
-Route::prefix('user')->group(function () {
-    include('userRouter.php');
-});
