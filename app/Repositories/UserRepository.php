@@ -30,7 +30,7 @@ public function login($email, $password)
     if (!Auth::attempt($credentials)) {
         return false;
     }
-
+   
     return Auth::user();
 }
 }

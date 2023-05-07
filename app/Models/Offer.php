@@ -9,6 +9,11 @@ class Offer extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'description',
+    ];
+
     public function coupons()
 {
     return $this->hasMany(Coupon::class);

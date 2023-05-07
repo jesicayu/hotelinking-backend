@@ -4,9 +4,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
 |
 | Here is where you can register API routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
@@ -18,14 +15,18 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::prefix('offer')->group(function () {
-    include('offerRouter.php');
-});
-
-Route::prefix('coupon')->group(function () {
-    include('couponRouter.php');
-});
-
-Route::prefix('user')->group(function () {
-    include('userRouter.php');
+Route::middleware('web')->group(function () {
+    // Route definitions with session-based authentication
+    
+    Route::prefix('offer')->group(function () {
+        include('offerRouter.php');
+    });
+    
+    Route::prefix('user')->group(function () {
+        include('userRouter.php');
+    });
+    
+    Route::prefix('coupon')->group(function () {
+        include('couponRouter.php');
+    });
 });
