@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Coupon;
 
 class UserRepository {
 public function register($email, $password){
@@ -32,5 +33,19 @@ public function login($email, $password)
     }
    
     return Auth::user();
+}
+public function getUserCoupons($user){
+    return $user->coupons()->with('offer')->get();
+}
+
+public function redeemUserCoupon($user, $couponId)
+{
+    $coupon = Coupon::where('id', $couponId)->where('user_id', $user->id)->first();
+    if(!$coupon){
+       return false;
+    }
+    $coupon->redeemed = true;
+    $coupon->save();
+    return $coupon;
 }
 }
