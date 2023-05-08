@@ -9,7 +9,7 @@ use App\Models\User;
 use App\Models\Coupon;
 
 class UserRepository {
-public function register($email, $password){
+public function register($name, $email, $password){
    
     $existingUser = User::where('email', $email) -> first();
 
@@ -18,6 +18,7 @@ public function register($email, $password){
     }
    
     $user = User::create([
+        'name' => $name,
         'email' => $email,
         'password' => Hash::make($password),
     ]);

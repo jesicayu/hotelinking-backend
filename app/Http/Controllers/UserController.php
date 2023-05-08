@@ -15,10 +15,11 @@ class UserController extends Controller
     }
     public function registerUser(Request $request){
 
+        $name = $request->name;
         $email = $request->email;
         $password = $request->password;
 
-        $user = $this->userRepository->register($email, $password);
+        $user = $this->userRepository->register($name,$email, $password);
 
         if(!$user){
             return response()->json(['message' => 'Email already exists'], 409);

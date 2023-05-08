@@ -11,6 +11,7 @@ class User extends Model implements Authenticatable
     use HasFactory;
 
     protected $fillable = [
+        'name',
         'email',
         'password',
     ];
