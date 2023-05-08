@@ -15,18 +15,20 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::middleware('web')->group(function () {
-    // Route definitions with session-based authentication
+// Route::middleware('web')->group(function () {
+//     // Route definitions with session-based authentication
     
-    Route::prefix('offer')->group(function () {
-        include('offerRouter.php');
-    });
-    
-    Route::prefix('user')->group(function () {
-        include('userRouter.php');
-    });
-    
-    Route::prefix('coupon')->group(function () {
-        include('couponRouter.php');
-    });
+ 
+// });
+
+Route::prefix('offer')->group(function () {
+    include('offerRouter.php');
+});
+
+Route::prefix('user')->group(function () {
+    include('userRouter.php');
+});
+
+Route::prefix('coupon')->group(function () {
+    include('couponRouter.php');
 });
