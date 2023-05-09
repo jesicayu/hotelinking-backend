@@ -35,6 +35,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+After you have the backend running, please make sure to follow the steps of the README of [Hotelinking frontend](https://github.com/jesicayu/hotelinking-frontend) and that you have the project running!
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Features
@@ -48,10 +50,9 @@
 
 ### Built With
 
-* [![React][React.js]][React-url]
-* [![Bulma][Bulma]][Bulma-url]
-* [![Redux][Redux]][Redux-url]
-* [![Vite][Vite]][Vite-url]
+* [![Laravel][Laravel.com]][Laravel-url]
+* [![php][PHP]][PHP-url]
+* [![PostgreSQL][PostgreSQL]][PostgreSQL-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,7 +63,9 @@
 
 In order to run this project, you need to first install:
 
-- Node.js
+- PHP
+- Laravel
+- Composer
 
 ### Installation
 
@@ -147,4 +150,6 @@ Project Link: https://github.com/jesicayu/TMDB
 [Sequelize-url]: https://sequelize.org/
 [Vite]:https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
 [Vite-url]: https://vitejs.dev/
+[PHP]:https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white
+[PHP-url]: https://www.php.net/
 
