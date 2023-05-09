@@ -1,11 +1,11 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  🎬
-<h2>HOTELINKING FRONTEND</h2>
+
+<h2>HOTELINKING BACKENED</h2>
 
   <p align="center">
-    A movies and series catalog that allows users to search and manage a personal favorite list, consuming information from The Movie Database (https://www.themoviedb.org/).
+    A coupon catalog that allows users to create unique coupon codes and redeem them.
     <br />
   </p>
 </div>
@@ -35,29 +35,23 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img width="1019" alt="Screen Shot 2023-04-27 at 5 36 56 PM" src="https://user-images.githubusercontent.com/99686026/234992305-4b903f2e-64fa-4b38-b07e-82900e38a391.png">
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Features
 
 - Create users.
 - Log in and log out users.
-- Search for movies and TV shows.
-- View details of a chosen movie or TV show.
-- Favorite movies and TV shows to curate a personalized list.
-- Remove movies and TV shows from the favorite list.
-- View a list of your favorited movies and TV shows.
-- Maintain the session of a user open upon refreshing the browser.
+- View offers.
+- Generate a coupon code for an offer.
+- View a list of the offers that the user has created a coupon for.
+- Redeem a coupon.
 
 ### Built With
 
 * [![React][React.js]][React-url]
 * [![Bulma][Bulma]][Bulma-url]
-* [![Node][Node]][Node-url]
-* [![Express][Express]][Express-url]
-* [![PostgreSQL][PostgreSQL]][PostgreSQL-url]
-* [![Sequelize][Sequelize]][Sequelize-url]
+* [![Redux][Redux]][Redux-url]
+* [![Vite][Vite]][Vite-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -68,12 +62,10 @@
 
 In order to run this project, you need to first install:
 
-- PostgreSQL
 - Node.js
 
 ### Installation
 
-1. Get a free API Key at https://developers.themoviedb.org/3
 2. Clone the repo
    ```
    git clone https://github.com/jesicayu/TMDB
@@ -127,8 +119,12 @@ Project Link: https://github.com/jesicayu/TMDB
 [Bulma-url]: https://bulma.io/
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
+[MUI]:https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white
+[MUI-url]: https://mui.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[Redux]: https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white
+[Redux.url]: https://redux.js.org/
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
 [Vue-url]: https://vuejs.org/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
@@ -149,4 +145,6 @@ Project Link: https://github.com/jesicayu/TMDB
 [PostgreSQL-url]: https://www.postgresql.org/
 [Sequelize]: https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white
 [Sequelize-url]: https://sequelize.org/
+[Vite]:https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[Vite-url]: https://vitejs.dev/
 
