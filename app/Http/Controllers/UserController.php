@@ -67,7 +67,7 @@ class UserController extends Controller
         $user = Auth::user();
         $coupons = $this->userRepository->getUserCoupons($user);
 
-        return response()->json(['coupons' => $coupons]);
+        return $coupons;
     }
 
     public function redeemCoupon($couponId)
@@ -79,5 +79,15 @@ class UserController extends Controller
             return response()->json(['message' => 'Coupon unable to be redeemed'], 404);
         }
         return response()->json(['message' => 'Coupon redeemed successfully'], 200);
+    }
+    public function checkAuth()
+    {
+        $user = Auth::user();
+        
+        return response()->json([
+            'email' => $user->email,
+            'name' => $user->name,
+            'id' => $user->id,
+        ], 200);
     }
 }

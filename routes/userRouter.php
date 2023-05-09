@@ -9,3 +9,5 @@ Route::post('/login', [UserController::class, 'logInUser']);
 Route::post('/logout', [UserController::class, 'logOutUser']);
 Route::put('/redeem/{couponId}', [UserController::class, 'redeemCoupon'])->middleware('auth');
 Route::get('/usercoupons', [UserController::class, 'userCoupons'])->middleware('auth');
+Route::get('/checkauth', [UserController::class, 'checkAuth'])->middleware('auth');
+

@@ -6,7 +6,13 @@ use App\Models\Coupon;
 
 class CouponRepository {
     public function createCoupon($offerId, $user) {
-       
+
+        $existingCoupon = Coupon::where('offer_id', $offerId)
+        ->where('user_id', $user->id)
+        ->first();
+
+        if($existingCoupon) return false;
+
         $code = $this->generateCouponCode();
 
         $coupon = new Coupon();

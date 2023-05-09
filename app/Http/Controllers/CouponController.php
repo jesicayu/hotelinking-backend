@@ -17,6 +17,11 @@ class CouponController extends Controller
         $user = Auth::user();
 
         $coupon = $this->couponRepository->createCoupon($offerId, $user);
+
+        if(!$coupon){
+            return response()->json(['message' => 'User cannot create more than one coupon per offer'], 409);
+        };
+
         return response()->json(['message' => 'Coupon created successfully'],201);
     }
 }
