@@ -66,36 +66,53 @@ In order to run this project, you need to first install:
 - PHP
 - Laravel
 - Composer
+- PostgreSQL
 
 ### Installation
 
-2. Clone the repo
+1. Clone the repo
    ```
-   git clone https://github.com/jesicayu/TMDB
+   git clone https://github.com/jesicayu/hotelinking-backend
    ```
-3. Install NPM packages
+2. Install dependencies
    ```
-   npm install
+   composer install
    ```
-4. Enter your API in the `keys.js` file, within the config folder
+3. Create your database in postgreSQL
    ```
-   const API_KEY = 'ENTER YOUR API';
+   createdb hotelinking
    ```
-5. Create your local database
+4. Create your .env file
    ```
-   createdb tmdb
+   cp .env.example .env
    ```
-6. Start the app!
+5. Generate an application key
    ```
-   npm start
+   php artisan key:generate
    ```
-
+6. Connect your application to your database by setting on your .env file
+   ```
+   DB_DATABASE=hotelinking
+   ```
+7. Run database migrations
+   ```
+   php artisan migrate
+   ```   
+8. Seed the offers data
+   ```
+   php artisan db:seed
+   ```
+9. Start the server!
+   ```
+   php artisan serve
+   ```
+   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
 
-Project Link: https://github.com/jesicayu/TMDB
+Project Link: https://github.com/jesicayu/hotelinking-backend
 <br/>
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
